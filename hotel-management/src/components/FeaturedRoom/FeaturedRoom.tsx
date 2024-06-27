@@ -17,7 +17,7 @@ const FeaturedRoom: FC<Props> = ({ featuredRoom }) => {
     setIsClient(true);
   }, []);
 
-  // Пока компонент не смонтирован на клиенте, не рендерим его содержимое
+  
   if (!isClient) {
     return null;
   }

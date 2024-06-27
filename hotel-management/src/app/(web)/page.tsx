@@ -9,14 +9,15 @@ const Home = async () => {
   const featuredRoom = await getFeaturedRoom();
 
 
-
-  return <>
-  <HeroSection/>
-  <PageSearch />
-  <FeaturedRoom featuredRoom={featuredRoom}/>
-  <Gallery/>
-  <NewsLetter/>
-  </>
+  return (
+    <>
+      <HeroSection />
+      <PageSearch />
+      <FeaturedRoom featuredRoom={featuredRoom} />
+      <Gallery />
+      <NewsLetter />
+    </>
+  );
 };
 
 
