@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import { FC } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Room } from '@/app/models/room';
+import { Room } from '@/models/room';
 
 type Props = {
   featuredRoom: Room;
