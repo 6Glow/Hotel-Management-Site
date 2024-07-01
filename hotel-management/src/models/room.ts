@@ -2,9 +2,9 @@ type CoverImage = {
     url: string
 }
 
-type Image = {
-    _key: string;
-    url: string;
+export type Image = {
+            _key: string;
+            url: string;
 };
 
 type Amenity = {
