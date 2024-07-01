@@ -34,4 +34,16 @@ export type Room = {
       slug: Slug;
       specialNode: string;
       type: string;
+};
+
+export type CreateBookingDto = {
+  user: string;
+  hotelRoom: string;
+  checkinDate: string;
+  checkoutDate: string;
+  numberOfDays: number;
+  adults: number;
+  children: number;
+  totalPrice: number;
+  discount: number;
 }
