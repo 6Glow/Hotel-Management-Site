@@ -42,19 +42,6 @@ export async function POST(req: Request) {
         },
       } = session;
 
-      try {
-        await createBooking({
-          adults: Number(adults),
-          checkinDate,
-          checkoutDate,
-          children: Number(children),
-          hotelRoom,
-          numberOfDays: Number(numberOfDays),
-          discount: Number(discount),
-          totalPrice: Number(totalPrice),
-          user,
-        });
-
         // Update hotel Room
         await updateHotelRoom(hotelRoom);
 
