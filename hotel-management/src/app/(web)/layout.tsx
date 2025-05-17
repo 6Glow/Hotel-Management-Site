@@ -6,6 +6,7 @@ import Footer from "@/components/Footer/Footer";
 import ThemeProvider from "@/components/ThemeProvider/ThemeProvider";
 import { NextAuthProvider } from "@/components/AuthProvider/AuthProvider";
 import Toast from "@/components/Toast/Toast";
+import { CartProvider } from '@/context/CartContext';
 
 const poppins = Poppins({ subsets: ["latin"], 
       weight: ["400", "500", "700", "900"], 
@@ -36,9 +37,11 @@ export default function RootLayout({
         <ThemeProvider>
           <Toast/>
             <main className="font-normal">
-              <Header />
-              {children}
-              <Footer />
+              <CartProvider>
+                <Header />
+                {children}
+                <Footer />
+              </CartProvider>
             </main>
         </ThemeProvider>
         </NextAuthProvider>

@@ -3,6 +3,7 @@
 import { Dispatch, FC, SetStateAction } from 'react';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
+import { useCart } from '@/context/CartContext';
 
 type Props = {
   checkinDate: Date | null;
@@ -48,6 +49,8 @@ const BookRoomCta: FC<Props> = props => {
     return noOfDays;
   };
 
+  const { addToCart } = useCart();
+  
   return (
     <div className='px-7 py-6'>
       <h3>
@@ -155,6 +158,15 @@ const BookRoomCta: FC<Props> = props => {
       >
         {isBooked ? 'Booked' : 'Book Now'}
       </button>
+    </div>
+    <div className="mt-6 grid grid-cols-1 gap-2">
+      <Button
+        variant="outline"
+        onClick={handleAddToCart}
+        className="w-full"
+      >
+        Добавить в корзину
+      </Button>
     </div>
   );
 };
